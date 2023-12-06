@@ -1,0 +1,37 @@
+
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Savrsen broj</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+    function savrseniBroj(broj)
+	{
+	
+	let suma=0;
+	for(let i=1; i<broj; i++)
+	{
+	  
+	  if(broj%i === 0)
+	  {
+	  suma=suma+i;
+	  }
+	}
+	
+	if(suma === broj){
+	document.write("Broj je savrsen");
+	}
+	else{
+	document.write("Broj nije savrsen");
+	}
+	
+	
+
+	}
+	
+	savrseniBroj(100);
+ </script>
+</body>
+</html>

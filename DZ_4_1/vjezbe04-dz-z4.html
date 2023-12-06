@@ -1,0 +1,44 @@
+
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Polja i metode</title>
+</head>
+<body>
+ <script type="text/javascript">
+    
+	/*a*/ let polje = new Array(1,2,3,4,7,8,5,6,9, 55, 12, 4,85);
+	
+	document.write(polje.length + "<br>");
+	
+	
+	/*b*/ let DESC = polje.slice().sort(function(a, b) {
+           return b - a; 
+               });
+    document.write(DESC.join(",") + "<br>");
+	
+	
+	/*c*/ let ASC = polje.slice().sort(function(a, b) {
+      return a - b;
+         });
+    document.write(ASC.join(",") + "<br>");
+	
+	
+	/*d*/ let ukloniZadnjeg = ASC.pop(); // 
+      document.write(ukloniZadnjeg + "<br>"); 
+      document.write(ASC.join(", ") + "<br>"); 
+	  
+	  
+	/*e*/ASC.push(19,22);
+	document.write(ASC + "<br>");
+	
+	
+	/*f*/ let polje2 = ["Banana", "Orange", "Apple", "Mango"];
+	let polje_final = polje + "," + polje2;
+	document.write(polje_final);
+	      
+
+
+ </script>
+</body>
+</html>

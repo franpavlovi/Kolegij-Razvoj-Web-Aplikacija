@@ -1,0 +1,30 @@
+
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Prost broj</title>
+</head>
+<body>
+ <script type="text/javascript">
+    
+	for(let broj=2; broj<1000; broj++) 
+	{
+	   let brojac = 0;
+	   for(let i=2; i<1000; i++)
+	   {
+	    
+		if(broj % i === 0)
+		{
+		brojac++;
+		}
+	   }
+	   
+	   if(brojac === 1)
+	   {
+	    document.write(broj + " je prost <br>");
+		console.log(broj);
+	   }
+	}
+ </script>
+</body>
+</html>

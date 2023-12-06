@@ -1,0 +1,25 @@
+
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Objekt</title>
+</head>
+
+<body>
+ <script type="text/javascript">
+    
+	let osoba1 = {firstName:"Marko", lastName:"Maric", age:40, eyeColor:"black"};
+	let osoba2 = {firstName:"Ante", lastName:"Bilic", age:22, eyeColor:"black"};
+	let osoba3 = {firstName:"Ivan", lastName:"Komadina", age:33, eyeColor:"blue"};
+
+	let osobe = [ osoba1 , osoba2 , osoba3];
+	
+	for (let i = 0; i < osobe.length; i++) {
+  for (let key in osobe[i]) {
+    document.write("Indeks: " + key + ", Vrijednost: " + osobe[i][key] + "<br>");
+  }
+  document.write("<br>");
+}
+ </script>
+</body>
+</html>

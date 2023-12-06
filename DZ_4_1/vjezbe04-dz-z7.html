@@ -1,0 +1,26 @@
+
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Anonimna</title>
+</head>
+<body>
+ <script type="text/javascript">
+    
+    let funkcija = function()
+    {
+	 let unos = prompt("Unesite nešto:");
+	 
+	 if (!isNaN(unos)) {
+	    let kvadrat = unos*unos;
+        document.write("Unesen je broj "+unos+",a kvadrat toga broja je "+kvadrat);
+   } else {
+       document.write("Niste unijeli broj");
+   }
+
+    }	
+	
+	funkcija();
+ </script>
+</body>
+</html>

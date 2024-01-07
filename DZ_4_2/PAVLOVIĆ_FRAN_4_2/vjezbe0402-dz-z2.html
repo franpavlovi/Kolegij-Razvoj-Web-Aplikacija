@@ -1,0 +1,25 @@
+
+<html >
+<head>
+  
+  <title>Promijeni pozadinu</title>
+</head>
+<body>
+  <button id="promijeniPozadinu">Promijeni pozadinu</button>
+  <p id="trenutnaBoja"></p>
+
+  <script>
+    function generirajNasumicnuBoju() {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    function promijeniPozadinu() {
+      let novaBoja = generirajNasumicnuBoju();
+      document.body.style.backgroundColor = novaBoja;
+      document.getElementById('trenutnaBoja').textContent = 'Trenutna boja: ' + novaBoja;
+    }
+
+    document.getElementById('promijeniPozadinu').addEventListener('click', promijeniPozadinu);
+  </script>
+</body>
+</html>

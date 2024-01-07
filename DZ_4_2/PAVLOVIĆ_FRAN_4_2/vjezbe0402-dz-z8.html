@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Online Kalkulator</title>
+</head>
+<body>
+  <h1>Kalkulator</h1>
+
+  <label for="broj1">Unesite prvi broj:</label>
+  <input type="number" id="broj1">
+
+  <label for="broj2">Unesite drugi broj:</label>
+  <input type="number" id="broj2">
+
+  <button onclick="izracunaj('zbrajanje')">Zbroj</button>
+  <button onclick="izracunaj('oduzimanje')">Oduzimanje</button>
+  <button onclick="izracunaj('mnozenje')">Množenje</button>
+  <button onclick="izracunaj('dijeljenje')">Dijeljenje</button>
+  <button onclick="izracunaj('sinus')">Sinus</button>
+  <button onclick="izracunaj('kosinus')">Kosinus</button>
+  <button onclick="izracunaj('tanges')">Tanges</button>
+  <button onclick="izracunaj('log')">Log</button>
+  <button onclick="izracunaj('log10')">Log<sub>10</sub></button>
+  <button onclick="izracunaj('kvadriranje')">Kvadriranje</button>
+  <button onclick="izracunaj('kubiranje')">Kubiranje</button>
+  <button onclick="izracunaj('potenciranje')">Potenciranje</button>
+
+  <p>Rezultat: <span id="rezultat"></span></p>
+
+  <script>
+    function izracunaj(operacija) {
+      let broj1 = parseFloat(document.getElementById('broj1').value);
+      let broj2 = parseFloat(document.getElementById('broj2').value);
+      let rezultat = 0;
+
+      switch (operacija) {
+        case 'zbrajanje':
+          rezultat = broj1 + broj2;
+          break;
+        case 'oduzimanje':
+          rezultat = broj1 - broj2;
+          break;
+        case 'mnozenje':
+          rezultat = broj1 * broj2;
+          break;
+        case 'dijeljenje':
+          rezultat = broj1 / broj2;
+          break;
+        case 'sinus':
+          rezultat = Math.sin(broj1);
+          break;
+        case 'kosinus':
+          rezultat = Math.cos(broj1);
+          break;
+        case 'tanges':
+          rezultat = Math.tan(broj1);
+          break;
+        case 'log':
+          rezultat = Math.log(broj1);
+          break;
+        case 'log10':
+          rezultat = Math.log10(broj1);
+          break;
+        case 'kvadriranje':
+          rezultat = Math.pow(broj1, 2);
+          break;
+        case 'kubiranje':
+          rezultat = Math.pow(broj1, 3);
+          break;
+        case 'potenciranje':
+          rezultat = Math.pow(broj1, broj2);
+          break;
+        default:
+          rezultat = 'Nepoznata operacija';
+      }
+
+      document.getElementById('rezultat').innerText = rezultat;
+    }
+  </script>
+</body>
+</html>

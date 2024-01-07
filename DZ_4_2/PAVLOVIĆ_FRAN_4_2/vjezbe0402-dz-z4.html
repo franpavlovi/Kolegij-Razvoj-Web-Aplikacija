@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Ispis ocjene</title>
+</head>
+<body>
+  <form id="forma">
+    <label for="ocjena">Unesite ocjenu</label>
+    <input type="text" id="ocjena" name="ocjena">
+    <input type="submit" value="Provjeri">
+  </form>
+
+  <p id="ispisOcjene"></p>
+
+  <script>
+    document.getElementById('forma').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let ocjena = document.getElementById('ocjena').value;
+      let tekstOcjene;
+
+      if (ocjena === '1') {
+        tekstOcjene = 'Nedovoljan';
+      } else if (ocjena === '2') {
+        tekstOcjene = 'Dovoljan';
+      } else if (ocjena === '3') {
+        tekstOcjene = 'Dobar';
+      } else if (ocjena === '4') {
+        tekstOcjene = 'Vrlo dobar';
+      } else if (ocjena === '5') {
+        tekstOcjene = 'Odličan';
+      } else {
+        tekstOcjene = 'Nepoznata ocjena';
+      }
+
+      document.getElementById('ispisOcjene').textContent = 'Ocjena: ' + ocjena + ' - ' + tekstOcjene;
+    });
+  </script>
+</body>
+</html>

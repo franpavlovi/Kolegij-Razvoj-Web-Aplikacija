@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Izračun godina</title>
+</head>
+<body>
+  <form id="forma">
+    <label for="datum">Unesite datum rođenja:</label>
+    <input type="date" id="datum" name="datum">
+
+    <label for="godina">Unesite godinu rođenja:</label>
+    <input type="number" id="godina" name="godina">
+
+    <input type="submit" value="Izračunaj">
+  </form>
+
+  <script>
+    document.getElementById('forma').addEventListener('submit', function() {
+      
+      let datumRodjenja = new Date(document.getElementById('datum').value);
+      let godinaRodjenja = parseInt(document.getElementById('godina').value);
+
+      let trenutniDatum = new Date();
+      let trenutnaGodina = trenutniDatum.getFullYear();
+
+      let godine = trenutnaGodina - godinaRodjenja;
+
+      if (trenutniDatum.getMonth() < datumRodjenja.getMonth() ||
+          (trenutniDatum.getMonth() === datumRodjenja.getMonth() && trenutniDatum.getDate() < datumRodjenja.getDate())) {
+        godine--;
+      }
+
+      alert('Imate ' + godine + ' godina.');
+    });
+  </script>
+</body>
+</html>

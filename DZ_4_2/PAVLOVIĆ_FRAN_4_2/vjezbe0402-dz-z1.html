@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Aritmeticka i Geometrijska sredina</title>
+</head>
+<body>
+
+<script>
+  
+  function aritmetickaSredina(brojevi) {
+    let suma = 0;
+    for (let i = 0; i < brojevi.length; i++) {
+      suma += parseInt(brojevi[i]);
+    }
+    return suma / brojevi.length;
+  }
+
+  
+  function geometrijskaSredina(brojevi) {
+    let produkt = 1;
+    for (let i = 0; i < brojevi.length; i++) {
+      produkt *= parseInt(brojevi[i]);
+    }
+    return Math.pow(produkt, 1 / brojevi.length);
+  }
+
+  
+  let unos = prompt("Unesite brojeve odvojene zarezom ");
+
+ 
+  let uneseniBrojevi = unos.split(",");
+
+ 
+  let aritmeticka = aritmetickaSredina(uneseniBrojevi);
+
+  
+  let geometrijska = geometrijskaSredina(uneseniBrojevi);
+
+ 
+  document.write("Uneseni brojevi: " + uneseniBrojevi.join(', ') ); 
+  document.write("Aritmeticka sredina: " + aritmeticka ); 
+  document.write("Geometrijska sredina: " + geometrijska ); 
+</script>
+
+</body>
+</html>
+
